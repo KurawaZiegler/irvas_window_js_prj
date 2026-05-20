@@ -9,7 +9,7 @@ module.exports = {
         filename: 'bundle.js',
         // path: path.resolve(__dirname, 'dist/js')
     },
-    watch: true,
+    watch: false,
 
     devtool: "source-map",
 

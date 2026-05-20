@@ -35,7 +35,7 @@
         <div class="col-md-2 col-sm-3 col-xs-12">
           <div class="header_btn_wrap">
             <div class="header_btn_wrap_block">
-              <button class="header_btn text-uppercase text-left popup_engineer_btn">
+              <button data-modal class="header_btn text-uppercase text-left popup_engineer_btn">
                 Вызвать <br>замерщика
               </button>
             </div>
@@ -55,7 +55,7 @@
           <div class="contact_us">
             <div class="contact_us_wrap">
               <a href="#"><img src="assets/img/header/phone.png" alt="#">+7 (495) 646-61-71</a>
-              <a class="phone_link" href="#">Заказать обратный звонок</a>
+              <a data-modal class="phone_link" href="#">Заказать обратный звонок</a>
             </div>
           </div>
         </div>
@@ -172,7 +172,8 @@
           </div>
           <div class="glazing_price">
             <p>2600 руб.кв.м.<br><span>под ключ с установкой</span></p>
-            <button class="button glazing_price_btn text-uppercase popup_calc_btn">Рассчитать стоимость</button>
+            <button data-modal class="button glazing_price_btn text-uppercase popup_calc_btn">Рассчитать
+              стоимость</button>
           </div>
         </div>
 
@@ -189,7 +190,8 @@
           </div>
           <div class="glazing_price">
             <p>4000 руб.кв.м.<br><span>под ключ с установкой</span></p>
-            <button class="button glazing_price_btn text-uppercase popup_calc_btn">Рассчитать стоимость</button>
+            <button data-modal class="button glazing_price_btn text-uppercase popup_calc_btn">Рассчитать
+              стоимость</button>
           </div>
         </div>
 
@@ -812,7 +814,7 @@
     <div class="container">
       <div class="feedback_block text-center">
         <h3>Остались вопросы?</h3>
-        <a class="phone_link" href="#">Спросите у нашего специалиста!</a>
+        <a data-modal class="phone_link" href="#">Спросите у нашего специалиста!</a>
       </div>
     </div>
   </section>
@@ -842,10 +844,10 @@
 
   <!-- Modals -->
   <!-- Request a call -->
-  <div class="popup">
+  <div class="popup is-open">
     <div class="popup_dialog">
       <div class="popup_content text-center">
-        <button type="button" class="popup_close"><strong>&times;</strong></button>
+        <button data-modal_close type="button" class="popup_close"><strong>&times;</strong></button>
         <div class="popup_form">
           <form class="form" action="#">
             <h2>Введите ваши данные <br>и нажмите заказать звонок</h2>
@@ -860,10 +862,10 @@
   </div>
 
   <!-- Request an engineer -->
-  <div class="popup_engineer">
+  <div class="popup_engineer is-open">
     <div class="popup_dialog">
       <div class="popup_content text-center">
-        <button type="button" class="popup_close"><strong>&times;</strong></button>
+        <button data-modal_close type="button" class="popup_close"><strong>&times;</strong></button>
         <div class="popup_form">
           <form class="form" action="#">
             <h2>Запишитесь сегодня на <br><span>бесплатный замер</span></h2>
@@ -878,10 +880,10 @@
   </div>
 
   <!-- Calculator -->
-  <div class="popup_calc">
+  <div class="popup_calc is-open">
     <div class="popup_dialog">
       <div class="popup_calc_content text-center">
-        <button type="button" class="popup_calc_close"><strong>&times;</strong></button>
+        <button data-modal_close type="button" class="popup_calc_close"><strong>&times;</strong></button>
         <h2>Калькулятор</h2>
         <h3>Выберите форму балкона <br>и укажите размеры</h3>
         <div class="balcon_icons">
@@ -913,7 +915,7 @@
   <div class="popup_calc_profile">
     <div class="popup_dialog">
       <div class="popup_calc_profile_content text-center">
-        <button type="button" class="popup_calc_profile_close"><strong>&times;</strong></button>
+        <button data-modal_close type="button" class="popup_calc_profile_close"><strong>&times;</strong></button>
         <h2>Калькулятор</h2>
         <h3>Выберите тип остекления <br>и его профиль</h3>
         <select class="form-control" name="view" id="view_type">
@@ -944,7 +946,7 @@
   <div class="popup_calc_end">
     <div class="popup_dialog">
       <div class="popup_content text-center">
-        <button type="button" class="popup_calc_end_close"><strong>&times;</strong></button>
+        <button data-modal_close type="button" class="popup_calc_end_close"><strong>&times;</strong></button>
         <div class="popup_form">
           <form class="form" action="#">
             <h2>Спасибо за обращение! <br>Оставьте свои данные</h2>
@@ -961,6 +963,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Add slick.js -->
   <script src="assets/slick/slick.min.js"></script>
+  <script src="js/bundle.js"></script>
   <!-- Initialize modal, sliders -->
 
 </body>

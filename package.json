@@ -13,15 +13,17 @@
 		"not dead"
 	],
 	"devDependencies": {
-		"@babel/core": "^7.22.5",
-		"@babel/preset-env": "^7.22.5",
+		"@babel/cli": "^7.28.6",
+		"@babel/core": "^7.29.0",
+		"@babel/preset-env": "^7.29.5",
 		"babel": "^6.23.0",
 		"babel-core": "^6.26.3",
-		"babel-loader": "^9.1.2",
+		"babel-loader": "^9.2.1",
 		"browser-sync": "^2.29.3",
 		"core-js": "^3.31.0",
 		"gulp": "^4.0.2",
-		"webpack": "^5.86.0",
+		"webpack": "^5.106.2",
+		"webpack-cli": "^5.1.4",
 		"webpack-stream": "^7.0.0"
 	}
 }
