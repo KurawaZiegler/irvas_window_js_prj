@@ -12,12 +12,16 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
         tab.forEach(item => {
             item.classList.remove(activeClass)
         })
+        document.querySelectorAll('.glazing_link').forEach(item => {
+            item.classList.remove(activeClass)
+        })
     }
-    function showTabContent(i = 1) {
+    function showTabContent(i = 0) {
         content[i].classList.add('show')
         content[i].classList.remove('hide')
 
         tab[i].classList.add(activeClass)
+        document.querySelectorAll('.glazing_link')[i].classList.add(activeClass)
     }
     hideTabContent()
     showTabContent()
@@ -25,15 +29,31 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
     header.addEventListener('click', (e) => {
         const target = e.target
         if (target &&
-            target.classList.contains(tabSelector.replace(/\./, '')) ||
-            target.parentNode.classList.contains(tabSelector.replace(/\./, ''))) {
+            (target.classList.contains(tabSelector.replace(/\./, '')) ||
+                target.parentNode.classList.contains(tabSelector.replace(/\./, '')))) {
             tab.forEach((item, i) => {
-                if (target == item || target.parentNode == item) {
+                if (target === item || target.parentNode === item) {
                     hideTabContent()
                     showTabContent(i)
+                    document.querySelectorAll('.glazing_link').forEach((item, i) => {
+                        if (item === i) {
+                            item.classList.add(activeClass)
+                        }
+                    })
+
+                    // if (target.classList.contains('glazing_link')) {
+                    //     document.querySelectorAll('.glazing_link').forEach(item => {
+                    //         item.classList.add(activeClass)
+                    //     })
+                    // }
                 }
             })
         }
+        // if (target.classList.contains('glazing_link')) {
+        //     document.querySelectorAll('.glazing_link').forEach(item => {
+        //         item.classList.add(a)
+        //     })
+        // }
     })
 
 }
