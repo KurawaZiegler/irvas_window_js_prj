@@ -34,19 +34,6 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
                 }
             })
         }
-
-
-
-        // if (e.target && e.target.hasAttribute('[data-tab]')) {
-        //     tab.forEach((item, i) => {
-        //         if (e.target == item) {
-        //             hideTabContent()
-        //             showTabContent()
-
-        //             console.log('gdgd')
-        //         }
-        //     })
-        // }
     })
 
 }
