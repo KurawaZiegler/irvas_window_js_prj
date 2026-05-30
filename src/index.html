@@ -35,7 +35,7 @@
         <div class="col-md-2 col-sm-3 col-xs-12">
           <div class="header_btn_wrap">
             <div class="header_btn_wrap_block">
-              <button data-modal class="header_btn text-uppercase text-left popup_engineer_btn">
+              <button class="header_btn text-uppercase text-left popup_engineer_btn">
                 Вызвать <br>замерщика
               </button>
             </div>
@@ -55,7 +55,7 @@
           <div class="contact_us">
             <div class="contact_us_wrap">
               <a href="#"><img src="assets/img/header/phone.png" alt="#">+7 (495) 646-61-71</a>
-              <a data-modal class="phone_link" href="#">Заказать обратный звонок</a>
+              <a class="phone_link" href="#">Заказать обратный звонок</a>
             </div>
           </div>
         </div>
@@ -172,7 +172,7 @@
           </div>
           <div class="glazing_price">
             <p>2600 руб.кв.м.<br><span>под ключ с установкой</span></p>
-            <button data-modal class="button glazing_price_btn text-uppercase popup_calc_btn">Рассчитать
+            <button class="button glazing_price_btn text-uppercase popup_calc_btn">Рассчитать
               стоимость</button>
           </div>
         </div>
@@ -190,7 +190,7 @@
           </div>
           <div class="glazing_price">
             <p>4000 руб.кв.м.<br><span>под ключ с установкой</span></p>
-            <button data-modal class="button glazing_price_btn text-uppercase popup_calc_btn">Рассчитать
+            <button class="button glazing_price_btn text-uppercase popup_calc_btn">Рассчитать
               стоимость</button>
           </div>
         </div>
@@ -814,7 +814,7 @@
     <div class="container">
       <div class="feedback_block text-center">
         <h3>Остались вопросы?</h3>
-        <a data-modal class="phone_link" href="#">Спросите у нашего специалиста!</a>
+        <a class="phone_link" href="#">Спросите у нашего специалиста!</a>
       </div>
     </div>
   </section>
@@ -844,7 +844,7 @@
 
   <!-- Modals -->
   <!-- Request a call -->
-  <div class="popup is-open">
+  <div class="popup is-open" data-modal>
     <div class="popup_dialog">
       <div class="popup_content text-center">
         <button data-modal_close type="button" class="popup_close"><strong>&times;</strong></button>
@@ -862,7 +862,7 @@
   </div>
 
   <!-- Request an engineer -->
-  <div class="popup_engineer">
+  <div class="popup_engineer" data-modal>
     <div class="popup_dialog">
       <div class="popup_content text-center">
         <button data-modal_close type="button" class="popup_close"><strong>&times;</strong></button>
@@ -880,7 +880,7 @@
   </div>
 
   <!-- Calculator -->
-  <div class="popup_calc is-open">
+  <div class="popup_calc is-open" data-modal>
     <div class="popup_dialog">
       <div class="popup_calc_content text-center">
         <button data-modal_close type="button" class="popup_calc_close"><strong>&times;</strong></button>
@@ -912,7 +912,7 @@
     </div>
   </div>
 
-  <div class="popup_calc_profile">
+  <div class="popup_calc_profile" data-modal>
     <div class="popup_dialog">
       <div class="popup_calc_profile_content text-center">
         <button data-modal_close type="button" class="popup_calc_profile_close"><strong>&times;</strong></button>
@@ -943,12 +943,12 @@
     </div>
   </div>
 
-  <div class="popup_calc_end">
+  <div class="popup_calc_end" data-modal>
     <div class="popup_dialog">
       <div class="popup_content text-center">
         <button data-modal_close type="button" class="popup_calc_end_close"><strong>&times;</strong></button>
         <div class="popup_form">
-          <form class="form" action="#">
+          <form class="form" action="#" data-calc="end">
             <h2>Спасибо за обращение! <br>Оставьте свои данные</h2>
             <input class="form-control form_input" name="user_name" required type="text" placeholder="Введите ваше имя">
             <input class="form-control form_input" name="user_phone" required type="text" placeholder="Введите телефон">

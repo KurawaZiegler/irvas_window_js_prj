@@ -1,4 +1,4 @@
-const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
+const tabs = (headerSelector, tabSelector, contentSelector, activeClass, display = 'block') => {
     const header = document.querySelector(headerSelector)
     const tab = document.querySelectorAll(tabSelector)
     const content = document.querySelectorAll(contentSelector)
@@ -6,8 +6,9 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
 
     function hideTabContent() {
         content.forEach(item => {
-            item.classList.add('hide')
-            item.classList.remove('show')
+            // item.classList.add('hide')
+            // item.classList.remove('show')
+            item.style.display = 'none'
         })
         tab.forEach(item => {
             item.classList.remove(activeClass)
@@ -17,8 +18,9 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
         })
     }
     function showTabContent(i = 0) {
-        content[i].classList.add('show')
-        content[i].classList.remove('hide')
+        // content[i].classList.add('show')
+        // content[i].classList.remove('hide')
+        content[i].style.display = display
 
         tab[i].classList.add(activeClass)
         document.querySelectorAll('.glazing_link')[i].classList.add(activeClass)
@@ -40,20 +42,9 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
                             item.classList.add(activeClass)
                         }
                     })
-
-                    // if (target.classList.contains('glazing_link')) {
-                    //     document.querySelectorAll('.glazing_link').forEach(item => {
-                    //         item.classList.add(activeClass)
-                    //     })
-                    // }
                 }
             })
         }
-        // if (target.classList.contains('glazing_link')) {
-        //     document.querySelectorAll('.glazing_link').forEach(item => {
-        //         item.classList.add(a)
-        //     })
-        // }
     })
 
 }
